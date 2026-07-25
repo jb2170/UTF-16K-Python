@@ -1,0 +1,24 @@
+[project]
+name = "UTF-16K"
+dynamic = ["version"]
+description = "Unlimited UTF-16!"
+readme = "README.md"
+license = "GPL-3.0-only"
+license-files = ["LICENSE"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/UTF-8000/UTF-16K-Python/"
+
+[project.scripts]
+utf-16k = "UTF16K.CLI:main"
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools.dynamic]
+version = {attr = "UTF16K.__version__"}
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
