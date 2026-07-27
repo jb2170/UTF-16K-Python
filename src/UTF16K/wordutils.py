@@ -129,3 +129,6 @@ class WordsToBytes(codecs.IncrementalEncoder):
         ret = bytes(ret_array)
 
         return ret
+
+    def feed_eof(self) -> None:
+        self.encode(tuple(), final = True)
